@@ -9,7 +9,7 @@ add_hook('TicketUserReply', 1, function($vars) {
     $message = $vars['message'];
 
     // Discord Webhook URL'si
-    $webhook_url = 'https://discord.com/api/webhooks/1109640967570587648/d2W2DIjBqPfbQWUHtFPb-zFQZU-Yx7cvdZgHmaTFSx-4ls56UIbjhO19ucN08a-BQ4cA';
+    $webhook_url = 'WEBHOOK-URL';
 
     // Ticket bilgilerini al
     $ticket = Capsule::table('tbltickets')
@@ -27,7 +27,7 @@ add_hook('TicketUserReply', 1, function($vars) {
     $discord_message .= '**Konu:** ' . $ticket->title . PHP_EOL;
     $discord_message .= '**Müşteri:** ' . $user->firstname . ' ' . $user->lastname . ' (' . $user->email . ')' . PHP_EOL;
     $discord_message .= '**Yanıt:** ' . $message . PHP_EOL;
-    $discord_message .= "**Ticket URL:** https://yologaming.org/whmcs/tostingnetpanelburasigardasla/supporttickets.php?action=view&id={$vars['ticketid']}";
+    $discord_message .= "**Ticket URL:** https://whmcs-admin-panel-adresiniz.com/admin/supporttickets.php?action=view&id={$vars['ticketid']}";
 
     // Data array
     $data = [
