@@ -15,7 +15,7 @@ add_hook('AdminAreaPage', 1, function($vars) {
         $adminName = $admin->username;
 
         // Discord Webhook URL'sini ve içeriğini belirleyin
-        $webhookUrl = 'https://discord.com/api/webhooks/1109647430447812608/L1DbQ_pzDSwHZJGRCONQjUSiafxPmvLSnfZlkinRpp32lmkCdNbYiyHVo-PD0r-TTsL3';
+        $webhookUrl = 'WEBHOOK-LINK';
         $message = "Admin paneline giriş yapıldı.\n**Giriş Yapan Admin:** $adminName\n**Giriş Tarihi:** " . date('Y-m-d H:i:s');
 
         // Discord'a bildirim göndermek için CURL kullanın
