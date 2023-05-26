@@ -4,7 +4,7 @@ if (!defined("WHMCS"))
 
 add_hook('InvoicePaid', 1, function($vars) {
     // Discord Webhook URL
-    $webhook_url = 'https://discord.com/api/webhooks/1111490367586578532/rl2utwVvyqqbJSfxa1IeGDD-g2oUX8WD6BNlVZn5ikqODmBXXrUQjfkZa9L3Q7kdAka5';
+    $webhook_url = 'WEBHOOK-URL';
 
     // Get the invoice data
     $invoiceid = $vars['invoiceid'];
@@ -21,6 +21,7 @@ add_hook('InvoicePaid', 1, function($vars) {
     $message .= "**Fatura ID:** #{$invoiceid}\n";
     $message .= "**Müşteri Adı:** {$client['fullname']}\n";
     $message .= "**Müşteri E-Posta:** {$client['email']}\n";
+    $message .= "**URL:** https://whmcs-admin-panel-adresiniz.com/admin/invoices.php?action=edit&id={$vars['invoiceid']}";
 
     // Send the message to Discord
     $data = array(
