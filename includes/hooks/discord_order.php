@@ -3,7 +3,7 @@ if (!defined("WHMCS"))
 die("This file cannot be accessed directly");
 add_hook('AfterShoppingCartCheckout', 1, function($vars) {
     // Discord Webhook URL
-    $webhook_url = 'https://discord.com/api/webhooks/1109217896418250883/k0FdQd7mnDowIGpGeyhAWDd3OpfxoD-72fUcgvl8ouXJScg84fhzRaIXyH7eOgtZpslT';
+    $webhook_url = 'WEBHOOK-URL';
 
     // Get the order data
     $orderid = $vars['OrderID'];
@@ -21,7 +21,7 @@ add_hook('AfterShoppingCartCheckout', 1, function($vars) {
     $message .= "**Müşteri Adı:** {$client['fullname']}\n";
     $message .= "**Müşteri E-Posta:** {$client['email']}\n";
     $message .= "**Ödeme Yöntemi:** {$vars['PaymentMethod']}\n";
-    $message .= "**URL:** https://yologaming.org/whmcs/tostingnetpanelburasigardasla/orders.php?action=view&id={$vars['OrderID']}";
+    $message .= "**URL:** https://whmcs-admin-panel-adresiniz.com/admin/orders.php?action=view&id={$vars['OrderID']}";
 
     // Send the message to Discord
     $data = array(
