@@ -5,7 +5,7 @@ use WHMCS\Database\Capsule;
 
 add_hook('TicketOpen', 1, function($params) {
     // Discord Webhook URL
-    $webhook_url = 'https://discord.com/api/webhooks/1109215709944348712/ZAGudriQhVMBKX6wHWgHN3mfzAhC2IunjuRpufvampQZVe8f5wH_N8njh-jqJ213wmap';
+    $webhook_url = 'WEBHOOK-URL';
 
     // Get the ticket data
     $data = localAPI('GetTicket', array(
@@ -19,7 +19,7 @@ add_hook('TicketOpen', 1, function($params) {
     $message .= "**Konu:** {$data['subject']}\n";
     $message .= "**Öncelik:** {$data['priority']}\n";
     $message .= "**Durum:** {$data['status']}\n";
-    $message .= "**URL:** https://yologaming.org/whmcs/tostingnetpanelburasigardasla/supporttickets.php?action=view&id={$params['ticketid']}";
+    $message .= "**URL:** https://whmcs-admin-panel-adresiniz.com/admin/supporttickets.php?action=view&id={$params['ticketid']}";
 
     // Send the message to Discord
     $data = array(
